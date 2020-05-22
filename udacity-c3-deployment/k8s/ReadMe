@@ -1,0 +1,4 @@
+minikube start  --nodes 3  --memory=2048 --cpus=4 --v=7
+kubectl port-forward svc/frontend 8100:8100
+kubectl port-forward svc/reverseproxy 8080:8080
+kubectl scale deployment/backend-feed --replicas 5
